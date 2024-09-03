@@ -254,9 +254,9 @@ LOGIN_REDIRECT_URL = '/Dashboard'
 #         logging.info("Client connection closed")
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME' : 'dlgcq9sqc',
-    'API_KEY' : '375753421484816',
-    'API_SECRET' : '2QVjjFccIVr6MuFp2Fdp9ksO-qs',
+    'CLOUD_NAME' : 'dvrryukoy',
+    'API_KEY' : '949223373852384',
+    'API_SECRET' : 'JkvBgRvjV8HmqfCpsikM-BJFx60',
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
