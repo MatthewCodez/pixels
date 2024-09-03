@@ -27,7 +27,7 @@ DEBUG = os.environ.get('DJANGO_DEBUG', True)
 # Additional security settings
 if not DEBUG:
     # Ensure allowed hosts are set correctly
-    ALLOWED_HOSTS = ['pixelvault.live','www.pixelvault.live']
+    ALLOWED_HOSTS = ['altabay.live','www.altabay.live']
 
     # Security middleware settings
     SECURE_BROWSER_XSS_FILTER = True
