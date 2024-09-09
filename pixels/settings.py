@@ -111,16 +111,16 @@ WSGI_APPLICATION = 'pixels.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 # if DEBUG:
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': BASE_DIR / 'db.sqlite3',
-#         }
-#     }
-# else:
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DB_URL") ),
-}
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+# else:
+# DATABASES = {
+#     'default': dj_database_url.parse(os.environ.get("DB_URL") ),
+# }
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
@@ -258,5 +258,6 @@ CLOUDINARY_STORAGE = {
     'API_KEY' : '949223373852384',
     'API_SECRET' : 'JkvBgRvjV8HmqfCpsikM-BJFx60',
 }
+
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

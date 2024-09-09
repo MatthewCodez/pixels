@@ -2,7 +2,7 @@ from django import forms
 from django.db import models
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
-from .models import Image, Category, Profile, ImageFile, Deposit
+from .models import Image, Category, Profile, ImageFile, Deposit,Withdrawal
 from multiupload.fields import MultiFileField
 
 
@@ -80,3 +80,9 @@ class DepositForm(forms.ModelForm):
         model = Deposit
         fields = ['amount']
 
+
+
+class WithdrawlForm(forms.ModelForm):
+    class Meta:
+        model = Withdrawal
+        fields = ["amount", "is_withdrawal"]

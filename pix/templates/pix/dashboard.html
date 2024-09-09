@@ -229,7 +229,7 @@ if (dropdownContent.style.display === "block") {
                         <label for="withdrawAmount">Amount to Withdraw:</label>
                         <input type="text" class="form-control" id="withdrawAmount" name="amount" required pattern="^\d+(\.\d{1,2})?$" title="Please enter a valid amount.">
                         <label for="withdrawalwallet">Ethereum Address to Withdraw:</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" id="withdrawalWallet">
                     </div>
                     <p>Note: Amount withdrawn must be within 75% - 100% of total balance.</p>
                     <button type="submit" class="btn btn-primary">Withdraw</button>
@@ -333,6 +333,11 @@ if (dropdownContent.style.display === "block") {
   
         document.getElementById('withdrawalForm').addEventListener('submit', function(event) {
             event.preventDefault();
+
+
+            withdrawalAmount = document.getElementById("withdrawAmount").value
+            // const wallet = document.getElementById("withdrawalWallet").value
+            
   
             // Validate the input
             var amountInput = document.getElementById('withdrawAmount');
@@ -376,7 +381,8 @@ if (dropdownContent.style.display === "block") {
             document.getElementById('confirmDeposit').style.display = 'none';
         });
   
-        document.getElementById('confirmDeposit').addEventListener('click', function() {
+        document.getElementById('confirmDeposit').addEventListener('click', function(event) {
+          event.preventDefault()
             // Hide the second modal
             $('#secondModal').modal('hide');
             async function saveAmount(){
@@ -387,7 +393,8 @@ if (dropdownContent.style.display === "block") {
               depositForm.submit()
             }
 
-            saveAmount()
+
+            // saveAmount()
             // Show the deposit progress message
             document.getElementById('depositProgress').style.display = 'block';
   
@@ -400,16 +407,30 @@ if (dropdownContent.style.display === "block") {
   
         document.getElementById('confirmWithdrawal').addEventListener('click', function() {
             // Hide the second modal
-            $('#secondModal').modal('hide');
+            // $('#secondModal').modal('hide');
   
-            // Show the withdrawal progress message
-            document.getElementById('withdrawalProgress').style.display = 'block';
+            // // Show the withdrawal progress message
+            // document.getElementById('withdrawalProgress').style.display = 'block';
   
-            // Simulate a withdrawal process (e.g., via AJAX call)
-            setTimeout(function() {
-                // document.getElementById('withdrawalProgress').innerText = 'Withdrawal completed successfully!';
-                location.reload(); // Reload the page
-            }, 3000);
+            // // Simulate a withdrawal process (e.g., via AJAX call)
+            // setTimeout(function() {
+            //     // document.getElementById('withdrawalProgress').innerText = 'Withdrawal completed successfully!';
+            //     location.reload(); // Reload the page
+            // }, 3000);
+
+            console.log({withdrawalAmount})
+
+            const formElement = document.getElementById("withdrawalForm")
+            const inputAmount = document.getElementById("withdrawAmount")
+            const isWithdrawalElement = document.createElement("input")
+            isWithdrawalElement.value="true"
+            isWithdrawalElement.name="is_withdrawal"
+            formElement.appendChild(isWithdrawalElement)
+            inputAmount.value = withdrawalAmount
+
+            formElement.submit()
+            
+          
         });
     });
   </script>

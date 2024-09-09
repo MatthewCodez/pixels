@@ -13,7 +13,7 @@ from .models import Image, Category, Profile, ImageFile, Withdrawal, Transaction
 from django.shortcuts import get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
 from .models import User  # Assuming 'User' is in your app's models.py
-from .forms import DepositForm
+from .forms import DepositForm,WithdrawlForm
 from django.db.models import Q
 
 
@@ -239,6 +239,11 @@ def view_collections(request, image_name):
 def dashboard(request):
     deposit_form = DepositForm()
     if request.method == "POST":
+        is_withdrawal = request.POST.get("is_withdrawal")
+        if(is_withdrawal == "true"):
+            amount = request.POST.get("amount")
+            withdraw = Withdrawal.objects.create(amount=amount, user=request.user)
+
         amount = request.POST.get("amount")
         deposit = Deposit.objects.create(amount=amount, user=request.user)
     

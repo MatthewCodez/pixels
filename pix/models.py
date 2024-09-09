@@ -71,6 +71,7 @@ class Withdrawal(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     withdrawal_date = models.DateTimeField(auto_now_add=True)
+    is_withdrawal = models.CharField(choices=(("true", "true"), ("false","false")) ,default="false", max_length=20)
 
     def __str__(self):
         return f"{self.user.username} - {self.amount}"
