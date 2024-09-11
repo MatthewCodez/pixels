@@ -481,6 +481,61 @@ if (dropdownContent.style.display === "block") {
       </div>
       <button class="nav-button right">&gt;</button>
     </div>
+
+
+
+<bodyTS>
+  <div class="top-sellersTS">
+      <div class="sellerTS fade-in-element">
+          <img src="/static/pix/images/pfpphotos.jpg" alt="Seller 1" class="profile-picTS">
+          <div class="seller-infoTS">
+              <div class="seller-nameTS">mitch DOBROWNER</div>
+              <div class="amount-soldTS">$495,350</div>
+              <div class="other-infoTS">Top collector, Specializes in digital art.</div>
+          </div>
+      </div>
+      <div class="sellerTS fade-in-element">
+          <img src="/static/pix/images/pfpphotoss.jpg" alt="Seller 2" class="profile-picTS">
+          <div class="seller-infoTS">
+              <div class="seller-nameTS">ZIBO</div>
+              <div class="amount-soldTS">$302,711</div>
+              <div class="other-infoTS">Known for rare NFT drops.</div>
+          </div>
+      </div>
+      <div class="sellerTS fade-in-element">
+          <img src="/static/pix/images/pfpphotossz.jpg" alt="Seller 3" class="profile-picTS">
+          <div class="seller-infoTS">
+              <div class="seller-nameTS">daddyETH</div>
+              <div class="amount-soldTS">$295,028</div>
+              <div class="other-infoTS">Focused on collectible items.</div>
+          </div>
+      </div>
+      <div class="sellerTS fade-in-element">
+          <img src="/static/pix/images/pfpphotoz.jpg" alt="Seller 4" class="profile-picTS">
+          <div class="seller-infoTS">
+              <div class="seller-nameTS">johnny_MEATBALLZZ</div>
+              <div class="amount-soldTS">$157,500</div>
+              <div class="other-infoTS">Expert in virtual land sales.</div>
+          </div>
+      </div>
+      <div class="sellerTS fade-in-element">
+          <img src="/static/pix/images/pfpphotozz.jpg" alt="Seller 5" class="profile-picTS">
+          <div class="seller-infoTS">
+              <div class="seller-nameTS">dav!d LAWRENCE</div>
+              <div class="amount-soldTS">$104,500</div>
+              <div class="other-infoTS">Specializes in 3D NFTs.</div>
+          </div>
+      </div>
+      <div class="sellerTS fade-in-element">
+          <img src="/static/pix/images/pfpphotozzz.jpg" alt="Seller 6" class="profile-picTS">
+          <div class="seller-infoTS">
+              <div class="seller-nameTS">elmonX</div>
+              <div class="amount-soldTS">$100,000</div>
+              <div class="other-infoTS">Prominent NFT artist.</div>
+          </div>
+      </div>
+  </div>
+</bodyTS>
     
     <script>
     (function() {
@@ -1887,6 +1942,95 @@ body, html {
                 0 1px 0 white, 
                 0 -1px 0 white; /* Create a white outline */
         }
+
+
+
+
+        /* top sellers styling start */
+
+        
+        bodyTS {
+            margin: 0;
+            padding: 0;
+            background-color: blackTS;
+            color: whiteTS;
+            font-family: Arial, sans-serif;
+        }
+
+        .top-sellersTS {
+            overflow-y: auto;
+            max-height: 80vh;
+            padding: 20px;
+            border: 1px solid #333;
+        }
+
+        .sellerTS {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+        }
+
+        .profile-picTS {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            background-color: #222;
+        }
+
+        .seller-infoTS {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .seller-nameTS {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+            color: white;
+        }
+
+        .amount-soldTS {
+            font-size: 16px;
+            color: #00ff00;
+            margin: 5px 0;
+        }
+
+        .other-infoTS {
+            font-size: 14px;
+            color: #888;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .top-sellersTS {
+                max-height: 60vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profile-picTS {
+                width: 50px;
+                height: 50px;
+            }
+
+            .seller-nameTS {
+                font-size: 16px;
+            }
+
+            .amount-soldTS {
+                font-size: 14px;
+            }
+
+            .other-infoTS {
+                font-size: 12px;
+            }
+        }
+
+        /* top sellers styling end */
 
 
 
