@@ -25,5 +25,7 @@ urlpatterns = [
     path("collection_purchase/", views.collection_purchase , name="collection_purchase"),
     path('deposit/', deposit, name='deposit'),
     path('withdraw/', views.withdraw, name='withdraw'),
+    path("review1/", views.review1 , name='review1'),
+    path("review2/", views.review2 , name='review2'),
    
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

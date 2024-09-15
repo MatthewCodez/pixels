@@ -279,6 +279,20 @@ def Terms(request):
     rendered_template = template.render(context, request)
     return HttpResponse(rendered_template)
 
+
+def review1(request):
+    template = loader.get_template('pix/review1.html')
+    context = {}
+    rendered_template = template.render(context, request)
+    return HttpResponse(rendered_template)
+
+
+def review2(request):
+    template = loader.get_template('pix/review2.html')
+    context = {}
+    rendered_template = template.render(context, request)
+    return HttpResponse(rendered_template)
+
 # def settings_view(request):
 #     profile = get_object_or_404(Profile, user=request.user)
 #     if request.method == 'POST':
