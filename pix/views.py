@@ -1,20 +1,20 @@
-#from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
-#from django.template import loader
-#from django.contrib.auth import authenticate, login as auth_login
-#from django.contrib.auth.forms import AuthenticationForm
-#from .forms import UserRegisterForm, UserLoginForm, ProfilePictureForm, ProfileSettingsForm
-#from django.shortcuts import render, redirect
-#from django.contrib.auth import logout
-#from django.contrib import messages
-#from .models import Balance, Notification, CollectionClickLog, Deposit
-#from django.contrib.auth.decorators import login_required
-#from .forms import ImageUploadForm
-#from .models import Image, Category, Profile, ImageFile, Withdrawal, Transaction
-#from django.shortcuts import get_object_or_404
-#from django.views.decorators.csrf import csrf_exempt
-#from .models import User  # Assuming 'User' is in your app's models.py
-#from .forms import DepositForm,WithdrawlForm
-#from django.db.models import Q
+from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
+from django.template import loader
+from django.contrib.auth import authenticate, login as auth_login
+from django.contrib.auth.forms import AuthenticationForm
+from .forms import UserRegisterForm, UserLoginForm, ProfilePictureForm, ProfileSettingsForm
+from django.shortcuts import render, redirect
+from django.contrib.auth import logout
+from django.contrib import messages
+from .models import Balance, Notification, CollectionClickLog, Deposit
+from django.contrib.auth.decorators import login_required
+from .forms import ImageUploadForm
+from .models import Image, Category, Profile, ImageFile, Withdrawal, Transaction
+from django.shortcuts import get_object_or_404
+from django.views.decorators.csrf import csrf_exempt
+from .models import User  # Assuming 'User' is in your app's models.py
+from .forms import DepositForm,WithdrawlForm
+from django.db.models import Q
 
 
 
